@@ -5,10 +5,11 @@ type Props = {
     onSubmit: (correct: boolean) => void
 }
 
-function QuestionComp() {
-
-
-
+function QuestionComp(props: Props) {
+    return <div>
+        <h3>{props.queestion.question}</h3>
+        
+    </div>
 }
 
 
