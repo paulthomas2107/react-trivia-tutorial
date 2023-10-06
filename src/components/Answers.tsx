@@ -20,7 +20,15 @@ function Answers(props: Props) {
                 let color = '';
                 if (showAnswer && props.question.correctAnswerIdx === idx) color = 'green';
                 else if (showAnswer) color == 'red';
-                return <Answer text={choice} onPress={() => onPress(idx)} color={color} />;
+                return (
+                    <Answer
+                        text={choice}
+                        onPress={() => onPress(idx)}
+                        color={color}
+                        disabled={showAnswer}
+                        key={idx}
+                    />
+                );
             })}
         </div>
     );

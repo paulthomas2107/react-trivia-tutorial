@@ -1,3 +1,4 @@
+import QuestionComp from './components/Question';
 import StatBar from './components/StatBar';
 import questions from './questions.json';
 import { Questions } from './types';
@@ -16,6 +17,10 @@ function App() {
                 totalQuestions={allQuestions.questions.length}
                 correct={correctAnswers}
                 incorrect={inCorrectAnswers}
+            />
+            <QuestionComp
+                queestion={allQuestions.questions[currentQuestionIdx]}
+                onSubmit={() => {}}
             />
         </div>
     );
